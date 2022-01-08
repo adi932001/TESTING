@@ -3,12 +3,12 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
-
+const bodyParser = require("body-parser");
 const cors = require("cors");
 
 //My routes
 const list = require("./routes/task");
-
+app.use(bodyParser.json());
 
 //DB Connection
 mongoose

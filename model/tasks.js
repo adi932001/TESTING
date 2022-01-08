@@ -4,6 +4,7 @@ const taskSchema=new mongoose.Schema({
     tasks:{
         type:String,
         trim :true,
+        unique:true,
         maxlength:1000
     }
 },{timestamps:true})
